@@ -11,6 +11,7 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'bourbon'
 gem 'neat'
 gem 'bitters'
+gem 'haml-rails'
 gem 'monban'
 gem 'monban-generators'
 
