@@ -2,6 +2,8 @@ class ShoutsController < ApplicationController
   def index
     @shout = Shout.new
     @shouts = Shout.all.order("created_at DESC")
+    @users = User.all
+    @following_relationship = FollowingRelationship.new
   end
 
   def create
