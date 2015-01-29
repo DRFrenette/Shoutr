@@ -1,0 +1,7 @@
+%h1 #{@user.email}
+
+= render "follow_button", user: @user
+
+%p #{@user.email} is following
+%ul
+  = render @followed_users
