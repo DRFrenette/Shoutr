@@ -5,4 +5,11 @@ class FollowingRelationshipsController < ApplicationController
 
     redirect_to :back
   end
+
+  def destroy
+    user_to_unfollow = User.find(params[:user_id])
+    current_user.unfollow(user_to_unfollow)
+
+    redirect_to :back
+  end
 end
