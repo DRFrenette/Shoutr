@@ -10,6 +10,12 @@ class User < ActiveRecord::Base
 
   has_many :followed_users, through: :followed_user_relationships
 
+  has_many :follower_relationships,
+    foreign_key: :followed_user_id,
+    class_name: "FollowingRelationship"
+
+  has_many :followers, through: :follower_relationships
+
   def follow(user_to_follow)
     followed_users << user_to_follow
   end

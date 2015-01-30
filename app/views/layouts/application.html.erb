@@ -1,21 +1,22 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Shoutr</title>
-  <%= stylesheet_link_tag    'application' %>
-  <%= javascript_include_tag 'application' %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
-<% if signed_in? %>
-  <%= link_to "Sign out", session_path, method: :delete %>
-  <%= link_to "Users", users_path %>
-<% else %>
-  <%= link_to "Sign in", new_session_path %>
-  <%= link_to "Sign up", new_user_path %>
-<% end %>
+  <head>
+    <title>Shoutr</title>
+    <%= stylesheet_link_tag    'application' %>
+    <%= javascript_include_tag 'application' %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
+    <% if signed_in? %>
+      <%= link_to "Sign out", session_path, method: :delete %>
+      <%= link_to "Users", users_path %>
+      <%= link_to "Your Followers", followers_path %>
+    <% else %>
+      <%= link_to "Sign in", new_session_path %>
+      <%= link_to "Sign up", new_user_path %>
+    <% end %>
 
-<%= yield %>
+    <%= yield %>
 
-</body>
+  </body>
 </html>
