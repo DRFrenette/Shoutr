@@ -14,6 +14,7 @@ gem 'bitters'
 gem 'haml-rails'
 gem 'monban'
 gem 'monban-generators'
+gem 'kaminari'
 
 gem 'rails_12factor', group: :production
 
