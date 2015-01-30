@@ -1,4 +1,5 @@
 %li
   = render shout.subject
-  \-
-  %i= shout.user.email
+  (#{time_ago_in_words shout.created_at} ago)
+  %strong
+    = shout.user.email
