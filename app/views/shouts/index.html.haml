@@ -1,4 +1,5 @@
 %h2 Shouts
-= render "form", text_subject: @text_subject
+= render "text_form", text_subject: @text_subject
+= render "image_form", image_subject: @image_subject
 %ul
   = render @timeline
