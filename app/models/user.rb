@@ -2,7 +2,7 @@ class User < ActiveRecord::Base
   validates :email, presence: true, uniqueness: true
   validates :password_digest, presence: true
 
-  has_many :shouts
+  has_many :shouts, dependent: :destroy
 
   has_many :followed_user_relationships,
     foreign_key: :follower_id,
