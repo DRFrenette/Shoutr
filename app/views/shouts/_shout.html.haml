@@ -2,4 +2,4 @@
   = render shout.subject
   (#{time_ago_in_words shout.created_at} ago)
   %strong
-    = shout.user.email
+    = avatar(shout.user.email)
