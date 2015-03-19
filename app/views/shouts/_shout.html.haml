@@ -1,5 +1,8 @@
 %li
-  = render shout.subject
-  (#{time_ago_in_words shout.created_at} ago)
-  %strong
-    = avatar(shout.user.email)
+  .shout
+    .shout-gravatar
+      = avatar(shout.user.email)
+    .shout-content
+      %p= render shout.subject
+      %p.shout-detail
+        (#{time_ago_in_words shout.created_at} ago)
