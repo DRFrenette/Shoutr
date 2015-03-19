@@ -1,0 +1,12 @@
+<li>
+  <div class="shout">
+    <div class="shout-gravatar">
+      <%= avatar(shout.user.email) %>
+    </div>
+    <div class="shout-content">
+      <p><%= render shout.subject %></p>
+      <p class="shout-detail">
+      (<%= time_ago_in_words shout.created_at %> ago)</p>
+    </div>
+  </div>
+</li>
